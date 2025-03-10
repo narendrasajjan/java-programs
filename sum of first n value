@@ -1,0 +1,13 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+class Main {
+    public static void main(String[] args) throws IOException {
+        int n;
+        System.out.println("enter n value ;");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(br.readLine());
+        int sum = n*(n+1)/2;
+        System.out.println("Sum of first " + n + " numbers is: " + sum);
+    }
+}
