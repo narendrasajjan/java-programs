@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int[] array = {1,2,3,4,5};
+        int length = array.length;
+        int sum = 0;
+        for(int num : array){
+            sum = sum + num;
+        }
+        System.out.println("sum of elememts of array  :" + sum);
+        float average = sum/length;
+        System.out.println("average of elements of array :" + average);
+    }
+}
