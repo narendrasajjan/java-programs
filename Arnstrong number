@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int number;
+        System.out.println("enter the number");
+        Scanner sc = new Scanner(System.in);
+        number = sc.nextInt();
+        System.out.println("is armstrong : " + isArmstrong(number));
+    }
+    static boolean isArmstrong(int n){
+        int digits = 0, temp;
+        temp = n;
+        while(temp > 0){
+            temp = temp/10;
+            digits++;
+        }
+        System.out.println("number of digits:"+digits);
+        temp = n;
+        int sum = 0;
+        while(temp > 0){
+            int lastDigit = temp%10;
+            sum =(int) (sum + Math.pow(lastDigit,digits));
+            temp = temp/10;
+        }
+        if(sum == n)
+        return true;
+        return false;
+    }
+}
